@@ -1,0 +1,163 @@
+/* Genel ayarlar */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Markalar sayfası stilleri */
+.brand-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.brand-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.brand-logo {
+  max-width: 100px;
+  margin-bottom: 10px;
+}
+
+.brand-item h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.brand-item p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.brand-item a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #0070f3;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.brand-item a:hover {
+  background-color: #005bb5;
+}
+/* Kategori listesi için stil */
+.category-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.category-list li {
+  margin: 10px 0;
+}
+
+.category-list a {
+  text-decoration: none;
+  color: #0070f3;
+}
+
+.category-list a:hover {
+  color: #005bb5;
+}
+
+/* Ürün listeleme sayfası için stil */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+/* Arama kutusu stilleri */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-bar input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.search-bar button:hover {
+  background-color: #005bb5;
+}
+/* Markalar grid yapısı */
+.brand-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.brand-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.brand-logo {
+  max-width: 100px;
+  margin-bottom: 10px;
+}
+
+.brand-item h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.brand-item p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.brand-item a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #0070f3;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.brand-item a:hover {
+  background-color: #005bb5;
+}
