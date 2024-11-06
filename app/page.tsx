@@ -13,15 +13,23 @@ import Contactus from "@/components/ContactUs";
 export default function Home() {
    return (
        <main className="page-content">
+
            <Banner />
+
            <Bands />
+
            <AboutUs />
+
            <Brands />
+
            <Products />
+
            <FAQ />
+
            <Bands2 />
-           <ServicePoints />
+
            <WhyUs />
+
            <Contactus />
        </main>
    );

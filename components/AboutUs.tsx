@@ -2,12 +2,12 @@ export default function AboutUs() {
     return (
         <section className="content-inner bg-light">
             <div className="container">
-                <div className="row content-wrapper style-13">
+                <div className="row content-wrapper style-13 align-items-center">
                     <div className="col-xl-5 col-lg-6 m-b15">
                         <div className="content-media" data-bottom-top="transform: translateY(-30px)"
                              data-top-bottom="transform: translateY(30px)">
                             <div className="dz-media">
-                                <img src="/images/about/img1.webp" alt=""/>
+                                <img src="/images/about/neden-avrora-medikal-4.jpg" alt=""/>
                             </div>
                             <div className="item4">
                                 <svg viewBox="0 0 217 620" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,34 +25,17 @@ export default function AboutUs() {
                         <div className="info-content">
                             <div className="section-head style-1 m-b30 wow fadeInUp" data-wow-delay="0.2s"
                                  data-wow-duration="0.8s">
-                                <h2 className="title m-b15">Beyond Skin Deep Personalized Care for Your Unique Beauty
-                                    Journey description At ClinicMaster</h2>
-                                <p>We believe healthy, radiant skin is achievable for everyone. We combine advanced
-                                    dermatology with innovative cosmetic solutions to address your unique skin concerns.
-                                    Our team of board-certified dermatologists and experienced aestheticians create
-                                    personalized treatment plans to achieve your desired results, whether it's treating
-                                    acne, restoring sun damage, or enhancing your natural beauty. Explore our website to
-                                    learn more about our services and discover the confidence that comes with feeling
-                                    your best in your own skin.</p>
+                                <h2 className="title m-b15">Sağlık ve Güzellikte Yenilikçi Çözümler Sunuyoruz</h2>
+                                <p>Avrora Medikal olarak, güzellik ve sağlığı bir arada ele alıyor, yenilikçi teknolojilerle desteklenmiş medikal çözümler sunuyoruz. Cilt bakımından estetik uygulamalara kadar geniş bir yelpazede hizmet vererek, her bireyin kendine özgü ihtiyaçlarını karşılamayı hedefliyoruz. Alanında uzman, deneyimli ekibimizle birlikte en son teknolojiyi kullanarak müşteri memnuniyetini en üst düzeyde tutmaya özen gösteriyoruz. Klinik kalitesindeki cihazlarımız ve profesyonel yaklaşımlarımızla, yalnızca yüzeysel değil, derinlemesine çözümler sunarak güzelliğinize ve sağlığınıza değer katıyoruz. Avrora Medikal, güven, kalite ve müşteri odaklı hizmet anlayışımızla sizinle bu güzellik yolculuğunda her adımda yanınızda olmaktan mutluluk duyuyor.</p>
                             </div>
                             <div className="d-flex align-items-center m-b15 wow fadeInUp" data-wow-delay="0.4s"
                                  data-wow-duration="0.8s">
                                 <div className="info-widget style-12 m-r20 bg-transparent border border-secondary">
-                                    <div className="avatar-group">
-                                        <img className="avatar rounded-circle avatar-md border border-white border-2"
-                                             src="/images/avatar/small/avatar1.webp" alt=""/>
-                                        <img className="avatar rounded-circle avatar-md border border-white border-2"
-                                             src="/images/avatar/small/avatar2.webp" alt=""/>
-                                        <img className="avatar rounded-circle avatar-md border border-white border-2"
-                                             src="/images/avatar/small/avatar3.webp" alt=""/>
-                                        <img className="avatar rounded-circle avatar-md border border-white border-2"
-                                             src="/images/avatar/small/avatar4.webp" alt=""/>
-                                    </div>
                                     <div className="clearfix">
-                                        <span>Talk to over 215 doctor</span>
+                                        <span>Avrora Hakkında</span>
                                     </div>
                                 </div>
-                                <a href="about-us.html" className="btn btn-square btn-xl btn-white btn-rounded">
+                                <a href="/hakkimizda" className="btn btn-square btn-xl btn-white btn-rounded">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path d="M7 17L17 7" stroke="var(--bs-primary)" strokeWidth="1.5"
@@ -61,22 +44,6 @@ export default function AboutUs() {
                                               strokeLinecap="round" strokeLinejoin="round"></path>
                                     </svg>
                                 </a>
-                            </div>
-                            <div className="widget-rating3 wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="0.8s">
-                                <ul className="star-list">
-                                    <li><i className="fa fa-star text-orange"></i></li>
-                                    <li><i className="fa fa-star text-orange"></i></li>
-                                    <li><i className="fa fa-star text-orange"></i></li>
-                                    <li><i className="fa fa-star text-orange"></i></li>
-                                    <li><i className="fa fa-star text-orange"></i></li>
-                                </ul>
-                                <span className="rating">(4.8)</span>
-                                <span className="text">12k+ ratings on google</span>
-                            </div>
-                            <div className="bottom-media" data-bottom-top="transform: translateY(-30px)"
-                                 data-top-bottom="transform: translateY(30px)">
-                                <img src="/images/about/img2.webp" className="item1" alt=""/>
-                                <img src="/images/about/img3.webp" className="item2" alt=""/>
                             </div>
                         </div>
                     </div>

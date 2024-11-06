@@ -1,169 +1,114 @@
 import React from "react";
+import { getProductsByCategory4 } from "@/lib/product";
 
-export default function Products() {
+type Product = {
+    id: number;
+    name: string;
+    image: string;
+    brand_name: string;
+    brand_slug: string;
+    slug: string;
+};
+
+type ProductsProps = {
+    categoryId: number | null;
+};
+
+export default async function Products() {
+    const cihazlar: Product[] = await getProductsByCategory4(1);
+    const tibbiCihazlar: Product[] = await getProductsByCategory4(2);
+    const kozmetikUrunler: Product[] = await getProductsByCategory4(3);
+
     return (
         <section className="content-inner bg-light">
             <div className="container">
                 <div className="section-head style-3 m-b30 text-center wow fadeInUp" data-wow-delay="0.2s"
                      data-wow-duration="0.8s">
-                    <h2 className="title">Our Featured <br/> Beauty Treatments</h2>
-                    <p>Experience a transformation! We offer the perfect blend of pampering treatments and powerful
-                        derma products to address your specific needs and unlock your most radiant skin.</p>
+                    <h2 className="title">Öne Çıkan Ürünlerimiz</h2>
+                    <p>Size özel güzellik ve bakım ürünlerimizi keşfedin.</p>
                 </div>
                 <div className="site-filters clearfix style-1 wow fadeInUp" data-wow-delay="0.4s"
                      data-wow-duration="0.8s">
                     <ul className="filters justify-content-center" data-bs-toggle="buttons">
-                        <li className="active">
+                        <li className="active" data-filter=".cihazlar">
                             <input type="radio"/>
-                            <a className="btn" href="javascript:void(0);">Skin & Face</a>
+                            <a className="btn">Cihazlar</a>
                         </li>
-                        <li data-filter=".data-oils">
+                        <li data-filter=".tibbicihazlar">
                             <input type="radio"/>
-                            <a className="btn" href="javascript:void(0);">Massage Oils</a>
+                            <a className="btn">Tıbbi Cihazlar</a>
                         </li>
-                        <li data-filter=".data-cosmetics">
+                        <li data-filter=".kozmetik">
                             <input type="radio"/>
-                            <a className="btn" href="javascript:void(0);">Cosmetics</a>
-                        </li>
-                        <li data-filter=".data-offers">
-                            <input type="radio"/>
-                            <a className="btn" href="javascript:void(0);">Daily Offers</a>
+                            <a className="btn">Kozmetik Ürünleri</a>
                         </li>
                     </ul>
                 </div>
                 <div className="clearfix">
                     <ul id="masonry" className="row">
-                        <li className="card-container col-xl-3 col-lg-4 col-sm-6 m-b30 data-oils data-offers wow fadeInUp"
-                            data-wow-delay="0.2s" data-wow-duration="0.8s">
-                            <div className="shop-card">
-                                <div className="dz-media">
-                                    <img src="/images/shop/img1.webp" alt="image"/>
-                                    <div className="shop-meta">
-                                        <a href="javascript:void(0);" className="btn quick-view"
-                                           data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i className="fa-solid fa-eye d-md-none d-block"></i>
-                                            <span className="d-md-block d-none">Quick View</span>
-                                        </a>
-                                        <div className="btn meta-icon dz-wishicon">
-                                            <i className="icon feather icon-heart dz-heart"></i>
-                                            <i className="icon feather icon-heart-on dz-heart-fill"></i>
-                                        </div>
-                                        <div className="btn meta-icon dz-carticon">
-                                            <i className="feather icon-shopping-cart"></i>
-                                        </div>
-                                    </div>
-                                    <div className="product-tag">
-                                        <span className="badge ">Get 20% Off</span>
-                                    </div>
-                                </div>
-                                <div className="dz-content">
-                                    <div className="inner-content">
-                                        <h3 className="title"><a href="#">Night beauty</a></h3>
-                                        <span className="price">$89.00 <del>$119.00</del></span>
-                                    </div>
-                                    <a href="#"
-                                       className="btn btn-square btn-lg btn-white btn-rounded shop-share-btn">
-                                        <i className="feather icon-arrow-up-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li className="card-container col-xl-3 col-lg-4 col-sm-6 m-b30 data-oils data-offers wow fadeInUp"
+                        {cihazlar.map((product) => (
+                        <li key={product.id} className="card-container col-xl-3 col-lg-4 col-sm-6 m-b30 cihazlar wow fadeInUp"
                             data-wow-delay="0.4s" data-wow-duration="0.8s">
                             <div className="shop-card">
                                 <div className="dz-media">
-                                    <img src="/images/shop/img2.webp" alt="image"/>
-                                    <div className="shop-meta">
-                                        <a href="javascript:void(0);" className="btn quick-view"
-                                           data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i className="fa-solid fa-eye d-md-none d-block"></i>
-                                            <span className="d-md-block d-none">Quick View</span>
-                                        </a>
-                                        <div className="btn meta-icon dz-wishicon">
-                                            <i className="icon feather icon-heart dz-heart"></i>
-                                            <i className="icon feather icon-heart-on dz-heart-fill"></i>
-                                        </div>
-                                        <div className="btn meta-icon dz-carticon">
-                                            <i className="feather icon-shopping-cart"></i>
-                                        </div>
-                                    </div>
+                                    <img src={product.image} alt={product.name}/>
                                 </div>
                                 <div className="dz-content">
                                     <div className="inner-content">
-                                        <h3 className="title"><a href="#">Herbal beauty</a></h3>
-                                        <span className="price">$89.00 <del>$119.00</del></span>
+                                        <a href={`/products/${product.brand_slug}/${product.id}`}>
+                                            {product.name}
+                                        </a>
                                     </div>
-                                    <a href="#"
+                                    <a href={`/${product.brand_slug}/${product.slug}`}
                                        className="btn btn-square btn-lg btn-white btn-rounded shop-share-btn">
                                         <i className="feather icon-arrow-up-right"></i>
                                     </a>
                                 </div>
                             </div>
                         </li>
-                        <li className="card-container col-xl-3 col-lg-4 col-sm-6 m-b30 data-cosmetics wow fadeInUp"
-                            data-wow-delay="0.6s" data-wow-duration="0.8s">
-                            <div className="shop-card">
-                                <div className="dz-media">
-                                    <img src="/images/shop/img3.webp" alt="image"/>
-                                    <div className="shop-meta">
-                                        <a href="javascript:void(0);" className="btn quick-view"
-                                           data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i className="fa-solid fa-eye d-md-none d-block"></i>
-                                            <span className="d-md-block d-none">Quick View</span>
+                        ))}
+                        {tibbiCihazlar.map((product) => (
+                            <li key={product.id} className="card-container col-xl-3 col-lg-4 col-sm-6 m-b30 tibbicihazlar wow fadeInUp"
+                                data-wow-delay="0.4s" data-wow-duration="0.8s">
+                                <div className="shop-card">
+                                    <div className="dz-media">
+                                        <img src={product.image} alt={product.name}/>
+                                    </div>
+                                    <div className="dz-content">
+                                        <div className="inner-content">
+                                            <a href={`/products/${product.brand_slug}/${product.id}`}>
+                                                {product.name}
+                                            </a>
+                                        </div>
+                                        <a href={`/${product.brand_slug}/${product.slug}`}
+                                           className="btn btn-square btn-lg btn-white btn-rounded shop-share-btn">
+                                            <i className="feather icon-arrow-up-right"></i>
                                         </a>
-                                        <div className="btn meta-icon dz-wishicon">
-                                            <i className="icon feather icon-heart dz-heart"></i>
-                                            <i className="icon feather icon-heart-on dz-heart-fill"></i>
-                                        </div>
-                                        <div className="btn meta-icon dz-carticon">
-                                            <i className="feather icon-shopping-cart"></i>
-                                        </div>
                                     </div>
                                 </div>
-                                <div className="dz-content">
-                                    <div className="inner-content">
-                                        <h3 className="title"><a href="#">Sun beauty</a></h3>
-                                        <span className="price">$89.00 <del>$119.00</del></span>
+                            </li>
+                        ))}
+                        {kozmetikUrunler.map((product) => (
+                            <li key={product.id} className="card-container col-xl-3 col-lg-4 col-sm-6 m-b30 kozmetik wow fadeInUp"
+                                data-wow-delay="0.4s" data-wow-duration="0.8s">
+                                <div className="shop-card">
+                                    <div className="dz-media">
+                                        <img src={product.image} alt={product.name} style={{ height: "337px"}}/>
                                     </div>
-                                    <a href="#"
-                                       className="btn btn-square btn-lg btn-white btn-rounded shop-share-btn">
-                                        <i className="feather icon-arrow-up-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li className="card-container col-xl-3 col-lg-4 col-sm-6 m-b30 data-cosmetics wow fadeInUp"
-                            data-wow-delay="0.8s" data-wow-duration="0.8s">
-                            <div className="shop-card">
-                                <div className="dz-media">
-                                    <img src="/images/shop/img4.webp" alt="image"/>
-                                    <div className="shop-meta">
-                                        <a href="javascript:void(0);" className="btn quick-view"
-                                           data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i className="fa-solid fa-eye d-md-none d-block"></i>
-                                            <span className="d-md-block d-none">Quick View</span>
+                                    <div className="dz-content">
+                                        <div className="inner-content">
+                                            <a href={`/products/${product.brand_slug}/${product.id}`}>
+                                                {product.name}
+                                            </a>
+                                        </div>
+                                        <a href={`/${product.brand_slug}/${product.slug}`}
+                                           className="btn btn-square btn-lg btn-white btn-rounded shop-share-btn">
+                                            <i className="feather icon-arrow-up-right"></i>
                                         </a>
-                                        <div className="btn meta-icon dz-wishicon">
-                                            <i className="icon feather icon-heart dz-heart"></i>
-                                            <i className="icon feather icon-heart-on dz-heart-fill"></i>
-                                        </div>
-                                        <div className="btn meta-icon dz-carticon">
-                                            <i className="feather icon-shopping-cart"></i>
-                                        </div>
                                     </div>
                                 </div>
-                                <div className="dz-content">
-                                    <div className="inner-content">
-                                        <h3 className="title"><a href="#">Green beauty</a></h3>
-                                        <span className="price">$89.00 <del>$119.00</del></span>
-                                    </div>
-                                    <a href="#"
-                                       className="btn btn-square btn-lg btn-white btn-rounded shop-share-btn">
-                                        <i className="feather icon-arrow-up-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>

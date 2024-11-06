@@ -297,11 +297,11 @@ export default function HizmetNoktalari() {
                                 <div className="item1">
                                     <svg viewBox="0 0 694 694" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="347" cy="347" r="346" stroke="var(--bs-primary)"
-                                                stroke-opacity="0.1" stroke-width="2" stroke-dasharray="12 12"/>
+                                                strokeOpacity="0.1" strokeWidth="2" strokeDasharray="12 12"/>
                                         <circle cx="347" cy="347" r="296" stroke="var(--bs-primary)"
-                                                stroke-opacity="0.2" stroke-width="2" stroke-dasharray="12 12"/>
+                                                strokeOpacity="0.2" strokeWidth="2" strokeDasharray="12 12"/>
                                         <circle cx="347" cy="347" r="244" stroke="var(--bs-primary)"
-                                                stroke-opacity="0.3" stroke-width="2" stroke-dasharray="12 12"/>
+                                                strokeOpacity="0.3" strokeWidth="2" strokeDasharray="12 12"/>
                                         <circle cx="147.5" cy="206.5" r="6.5" fill="var(--bs-primary)"/>
                                         <circle opacity="0.3" cx="206.5" cy="30.5" r="4.5" fill="var(--bs-primary)"/>
                                         <circle opacity="0.6" cx="62.5" cy="433.5" r="2.5" fill="var(--bs-primary)"/>

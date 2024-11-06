@@ -32,6 +32,20 @@ export const getProductsByCategory = async (categoryId: number) => {
     return result.rows;
 };
 
+// Belirli bir kategoriye göre ve en fazla 4 ürün getir
+export const getProductsByCategory4 = async (categoryId: number) => {
+    const result = await query(`
+        SELECT products.*, brands.name AS brand_name, brands.slug AS brand_slug
+        FROM products
+        JOIN brands ON products.brand_id = brands.id
+        WHERE products.category_id = $1 AND products.status = $2
+        ORDER BY products.sort_order
+        LIMIT 4
+    `, [categoryId, 'active']);
+
+    return result.rows;
+};
+
 // Belirli bir markaya göre ürünleri getir
 export const getProductsByBrand = async (brandId: number) => {
     const result = await query(`

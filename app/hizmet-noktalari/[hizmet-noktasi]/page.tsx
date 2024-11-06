@@ -88,7 +88,7 @@ export default function HizmetNoktasi() {
                                 </tr>
                                 <tr>
                                     <th>Degrees</th>
-                                    <td><a href="javascript:void(0);">MBBS University of California</a></td>
+                                    <td>MBBS University of California</td>
                                 </tr>
                                 <tr>
                                     <th>Experience</th>

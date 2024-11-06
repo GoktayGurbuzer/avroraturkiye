@@ -7,41 +7,10 @@ export default function Banner() {
                         <div className="col-md-6">
                             <div className="hero-content">
                                 <h1 className="title wow fadeInUp" data-wow-delay="0.2s"
-                                    data-wow-duration="0.8s">Skincare is Like A Workout For Your Skin</h1>
+                                    data-wow-duration="0.8s">Cildiniz İçin Sağlıklı Bir Dönüşüm!</h1>
                                 <div className="content-bx style-2 secondary m-b40 wow fadeInUp"
                                      data-wow-delay="0.4s" data-wow-duration="0.8s">
-                                    Experienced staff is dedicated to improving our patients’ dental health and
-                                    enhancing
-                                </div>
-                                <div className="d-flex">
-                                    <a href="#"
-                                       className="btn btn-lg btn-icon btn-primary wow fadeInUp" data-wow-delay="0.6s"
-                                       data-wow-duration="0.8s">
-                                        Appointment
-                                        <span className="right-icon"><i
-                                            className="feather icon-arrow-right"></i></span>
-                                    </a>
-                                    <div className="avatar-group m-l50 wow fadeInUp" data-wow-delay="0.8s"
-                                         data-wow-duration="0.8s">
-                                        <img className="avatar avatar-lg rounded-circle"
-                                             src="/images/avatar/small/avatar1.webp" alt=""/>
-                                        <img className="avatar avatar-lg rounded-circle"
-                                             src="/images/avatar/small/avatar2.webp" alt=""/>
-                                        <img className="avatar avatar-lg rounded-circle"
-                                             src="/images/avatar/small/avatar3.webp" alt=""/>
-                                        <img className="avatar avatar-lg rounded-circle"
-                                             src="/images/avatar/small/avatar4.webp" alt=""/>
-                                        <a href="#"
-                                           className="avatar btn btn-square btn-lg btn-white btn-shadow btn-rounded">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M7 17L17 7" stroke="var(--bs-secondary)" strokeWidth="1.5"
-                                                      strokeLinecap="round" strokeLinejoin="round"></path>
-                                                <path d="M7 7H17V17" stroke="var(--bs-secondary)" strokeWidth="1.5"
-                                                      strokeLinecap="round" strokeLinejoin="round"></path>
-                                            </svg>
-                                        </a>
-                                    </div>
+                                    Avrora Medikal ile cildinize ihtiyacı olan özel bakımı sunuyoruz. Dermatoloji ve estetik alanındaki uzmanlığımızla, sağlıklı ve canlı bir cilt için gerekli tüm çözümleri sağlıyoruz.
                                 </div>
                             </div>
                         </div>
@@ -51,19 +20,6 @@ export default function Banner() {
                                  data-top-bottom="transform: translateY(50px)">
                                 <img className="thumbnail" src="/images/hero-banner/img1.png" alt=""/>
                             </div>
-                        </div>
-                    </div>
-                    <div className="item1">
-                        <div className="widget-rating1">
-                            <ul className="star-list">
-                                <li><i className="fa fa-star"></i></li>
-                                <li><i className="fa fa-star"></i></li>
-                                <li><i className="fa fa-star"></i></li>
-                                <li><i className="fa fa-star"></i></li>
-                                <li><i className="fa fa-star"></i></li>
-                            </ul>
-                            <span className="rating text-primary m-r5">(4.8)</span>
-                            <span className="text">12k+ ratings on google</span>
                         </div>
                     </div>
                     <div className="item2 move-3" data-bottom-top="transform: translateY(-50px)"
@@ -98,8 +54,7 @@ export default function Banner() {
                     <li><a href="https://instagram.com">Instagram</a></li>
                     <li><a href="https://facebook.com">Facebook</a></li>
                 </ul>
-                <a href="/iletisim" className="btn btn-white btn-sm px-2 py-3 btn-shadow rounded">LET’S
-                    TALK</a>
+                <a href="/iletisim" className="btn btn-white btn-sm px-2 py-3 btn-shadow rounded">BİZE ULAŞIN</a>
             </div>
             <div className="banner-shape4"></div>
             <div className="banner-shape5"></div>
