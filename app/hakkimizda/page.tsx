@@ -1,8 +1,13 @@
+import AboutUs from "@/components/AboutUs";
+import React from "react";
+import Brands from "@/components/Brands";
+
 export default function Hakkimizda() {
     return (
         <div>
-            <h1>Hakkımızda</h1>
-            <p>Avrora Spa ve Medikal hakkında daha fazla bilgi edinin.</p>
+            <AboutUs />
+
+            <Brands />
         </div>
     );
 }

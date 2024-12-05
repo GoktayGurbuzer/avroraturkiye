@@ -28,23 +28,6 @@ export default function AboutUs() {
                                 <h2 className="title m-b15">Sağlık ve Güzellikte Yenilikçi Çözümler Sunuyoruz</h2>
                                 <p>Avrora Medikal olarak, güzellik ve sağlığı bir arada ele alıyor, yenilikçi teknolojilerle desteklenmiş medikal çözümler sunuyoruz. Cilt bakımından estetik uygulamalara kadar geniş bir yelpazede hizmet vererek, her bireyin kendine özgü ihtiyaçlarını karşılamayı hedefliyoruz. Alanında uzman, deneyimli ekibimizle birlikte en son teknolojiyi kullanarak müşteri memnuniyetini en üst düzeyde tutmaya özen gösteriyoruz. Klinik kalitesindeki cihazlarımız ve profesyonel yaklaşımlarımızla, yalnızca yüzeysel değil, derinlemesine çözümler sunarak güzelliğinize ve sağlığınıza değer katıyoruz. Avrora Medikal, güven, kalite ve müşteri odaklı hizmet anlayışımızla sizinle bu güzellik yolculuğunda her adımda yanınızda olmaktan mutluluk duyuyor.</p>
                             </div>
-                            <div className="d-flex align-items-center m-b15 wow fadeInUp" data-wow-delay="0.4s"
-                                 data-wow-duration="0.8s">
-                                <div className="info-widget style-12 m-r20 bg-transparent border border-secondary">
-                                    <div className="clearfix">
-                                        <span>Avrora Hakkında</span>
-                                    </div>
-                                </div>
-                                <a href="/hakkimizda" className="btn btn-square btn-xl btn-white btn-rounded">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7 17L17 7" stroke="var(--bs-primary)" strokeWidth="1.5"
-                                              strokeLinecap="round" strokeLinejoin="round"></path>
-                                        <path d="M7 7H17V17" stroke="var(--bs-primary)" strokeWidth="1.5"
-                                              strokeLinecap="round" strokeLinejoin="round"></path>
-                                    </svg>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>

@@ -36,7 +36,7 @@ export default function Header() {
                                 <li className="sub-menu-down">
                                     <a href="/"><span>Anasayfa</span></a>
                                 </li>
-                                <li><a href="/">Hakkımızda</a></li>
+                                <li><a href="/hakkimizda">Hakkımızda</a></li>
                                 <li className="sub-menu-down">
                                     <a onClick={(e) => e.preventDefault()}><span>Ürünlerimiz</span> <i
                                         className="fas fa-chevron-down tabindex"></i></a>
