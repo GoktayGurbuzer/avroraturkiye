@@ -19,10 +19,12 @@ export default function Footer(){
                                     <a href="/" className="btn btn-lg btn-outline-white btn-hover1">
                                         İletişime Geç
                                     </a>
+                                    {/*
                                     <a href="/"
                                        className="btn btn-lg btn-white text-primary btn-hover1 m-l20">
                                         Randevu Al
                                     </a>
+                                    */}
                                 </div>
                             </div>
                         </div>
@@ -70,7 +72,7 @@ export default function Footer(){
                                         <ul className="list-hover1">
                                             <li><a href="/">Teknik Servis</a></li>
                                             <li><a href="/">Eğitim</a></li>
-                                            <li><a href="/hizmet-noktalari">Hizmet Noktaları</a></li>
+                                            {/* <li><a href="/hizmet-noktalari">Hizmet Noktaları</a></li> */}
                                         </ul>
                                     </div>
                                 </div>

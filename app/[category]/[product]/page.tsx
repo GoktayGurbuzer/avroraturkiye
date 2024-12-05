@@ -70,11 +70,13 @@ export default async function ProductPage({ params }: { params: { product: strin
                                             <h1 className="title">{selectedProduct.name}</h1>
                                         </div>
                                     </div>
-                                    <p>{selectedProduct.description}</p>
+                                    <div
+                                        dangerouslySetInnerHTML={{__html: selectedProduct.content}}
+                                    />
 
                                     <div className="dz-info">
                                         <ul className="social-icon">
-                                            <li><strong>Paylaş:</strong></li>
+                                        <li><strong>Paylaş:</strong></li>
                                             <li>
                                                 <a href="https://www.facebook.com" target="_blank">
                                                     <i className="fa-brands fa-facebook-f"></i>
@@ -111,12 +113,14 @@ export default async function ProductPage({ params }: { params: { product: strin
                              id="myTabContent">
                             <div className="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
                                  aria-labelledby="home-tab" tabIndex={0}>
+
+                                {/*
                                 <div className="detail-bx">
                                     <div
                                         dangerouslySetInnerHTML={{__html: selectedProduct.content}}
                                     />
                                 </div>
-                                <div className="row g-lg-4 g-3">
+                                 <div className="row g-lg-4 g-3">
                                     <div className="col-xl-4 col-md-4 col-sm-4 col-6">
                                         <div className="related-img dz-media">
                                             <img src="/images/shop/middle/img1.webp" alt="/"/>
@@ -133,6 +137,7 @@ export default async function ProductPage({ params }: { params: { product: strin
                                         </div>
                                     </div>
                                 </div>
+                                 */}
                             </div>
                         </div>
                     </div>

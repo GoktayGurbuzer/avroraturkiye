@@ -63,7 +63,7 @@ export default function Header() {
                                     <ul className="sub-menu">
                                         <li><a href="/l">Teknik Servis</a></li>
                                         <li><a href="/">Eğitim</a></li>
-                                        <li><a href="/hizmet-noktalari">Hizmet Noktaları</a></li>
+                                        <li><a href="/">Hizmet Noktaları</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="/">Etkinlik</a></li>
